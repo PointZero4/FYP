@@ -32,9 +32,9 @@ class User {
     await login(user).then((response) {
       response['resp_code'] == '200'
           ? setTokenInStorage(context, response['token'])
-          : print("help");
+          : print("Incorrect details. Try again");
     }).catchError((err) {
-      print(err.toString());
+      showSnack(context, err.toString());
     });
   }
 
@@ -45,7 +45,7 @@ class User {
           ? setTokenInStorage(context, response['token'])
           : print('Account already exists');
     }).catchError((err) {
-      print( err.toString());
+      print(err.toString());
     });
   }
 

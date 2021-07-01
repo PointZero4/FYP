@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:sound_controller/models/user.dart';
 
-var url = 'change this to your backend url';
+var url = 'http://hp.com';
 
 Future login(User user) async {
   var headers = {"Content-Type": "application/json;charset=UTF-8"};
