@@ -1,4 +1,5 @@
 // import 'package:sound_kit/screens/dashboard.dart';
+import 'package:sound_controller/login.dart';
 import 'package:sound_controller/utils/api.dart';
 import 'package:sound_controller/utils/helpers.dart';
 
@@ -51,8 +52,8 @@ class User {
 
   setTokenInStorage(context, token) async {
     // set token in shared_pref
-    // storeInLocalStorage('token', token, 'str');
+    storeInLocalStorage('token', token, 'str');
     // redirect to dashboard
-    print("navigate to dashboard");
+    newPage(context, LoginPage());
   }
 }
